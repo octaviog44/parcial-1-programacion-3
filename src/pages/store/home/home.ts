@@ -76,6 +76,7 @@ function renderProducts(products: any[]) {
     const quantity = getProductQuantity(product.id);
 
     div.innerHTML = `
+      <img src="/src/assets/images/${product.imagen}" alt="${product.nombre}" />
       <h3>${product.nombre}</h3>
       <p>${product.descripcion}</p>
       <p>Precio: $${product.precio}</p>

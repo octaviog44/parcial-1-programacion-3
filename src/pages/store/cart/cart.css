@@ -1,0 +1,80 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* BODY */
+body {
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+/* TITULO */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* CONTENEDOR DEL CARRITO */
+#cart-container {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* CARD ITEM */
+#cart-container div {
+  background-color: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* TITULO PRODUCTO */
+#cart-container h3 {
+  margin-bottom: 10px;
+}
+
+/* TEXTO */
+#cart-container p {
+  margin-bottom: 5px;
+}
+
+/* BOTON ELIMINAR */
+.delete-btn {
+  margin-top: 10px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #e53935;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.delete-btn:hover {
+  background-color: #c62828;
+}
+
+/* TOTAL */
+#total {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* LINK */
+a {
+  display: block;
+  text-align: center;
+  margin-top: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #333;
+}
