@@ -14,10 +14,10 @@ form.addEventListener("submit", (e: SubmitEvent) => {
   const valueRol = selectRol.value as Rol;
 
   if (valueRol === "admin") {
-    navigate("/src/pages/admin/home/home.html");
-  } else if (valueRol === "client") {
-    navigate("/src/pages/client/home/home.html");
-  }
+  navigate("/src/pages/admin/home/home.html");
+} else if (valueRol === "client") {
+  navigate("/src/pages/client/home/home.html");
+}
 
   const user: IUser = {
     email: valueEmail,
