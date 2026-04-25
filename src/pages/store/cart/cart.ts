@@ -34,12 +34,33 @@ function renderCart() {
       <p>Precio: $${item.precio}</p>
       <p>Cantidad: ${item.quantity}</p>
       <p>Subtotal: $${subtotal}</p>
+      <button class="delete-btn">Eliminar</button>
     `;
 
     container.appendChild(div);
+    
+    const btn = div.querySelector(".delete-btn");
+    
+    btn?.addEventListener("click", () => {
+      removeFromCart(item.id);
+    });
+
   });
 
   totalElement.textContent = `Total: $${total}`;
+
+
+}
+
+
+function removeFromCart(id: number) {
+  let cart = getCart();
+
+  cart = cart.filter((item: any) => item.id !== id);
+
+  localStorage.setItem(CART_KEY, JSON.stringify(cart));
+
+  renderCart(); 
 }
 
 renderCart();
