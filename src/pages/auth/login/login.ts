@@ -13,10 +13,10 @@ form.addEventListener("submit", (e: SubmitEvent) => {
   //const valuePassword = inputPassword.value;
   const valueRol = selectRol.value as Rol;
 
-  if (valueRol === "admin") {
+if (valueRol === "admin") {
   navigate("/src/pages/admin/home/home.html");
 } else if (valueRol === "client") {
-  navigate("/src/pages/client/home/home.html");
+  navigate("/src/pages/store/home/home.html");
 }
 
   const user: IUser = {
