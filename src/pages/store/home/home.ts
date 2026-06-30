@@ -6,9 +6,7 @@ const container = document.getElementById("products");
 const categoriesContainer = document.getElementById("categories");
 const searchInput = document.getElementById("search") as HTMLInputElement;
 
-// -------------------
-// CARRITO
-// -------------------
+
 function getCart() {
   const cart = localStorage.getItem(CART_KEY);
   return cart ? JSON.parse(cart) : [];
@@ -62,9 +60,7 @@ function removeOneFromCart(id: number) {
   renderProducts(PRODUCTS);
 }
 
-// -------------------
-// RENDER PRODUCTOS
-// -------------------
+
 function renderProducts(products: any[]) {
   if (!container) return;
 
@@ -104,9 +100,7 @@ function renderProducts(products: any[]) {
   });
 }
 
-// -------------------
-// CATEGORIAS
-// -------------------
+
 function renderCategories() {
   if (!categoriesContainer) return;
 
@@ -140,9 +134,7 @@ function renderCategories() {
   categoriesContainer.appendChild(allBtn);
 }
 
-// -------------------
-// BUSQUEDA
-// -------------------
+
 searchInput.addEventListener("input", () => {
   const text = searchInput.value.toLowerCase();
 
@@ -153,8 +145,6 @@ searchInput.addEventListener("input", () => {
   renderProducts(filtered);
 });
 
-// -------------------
-// INIT
-// -------------------
+
 renderProducts(PRODUCTS);
 renderCategories();
